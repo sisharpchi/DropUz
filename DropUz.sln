@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropUz.Common.Infrastructur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropUz.Common.Presentation", "src\Common\DropUz.Common.Presentation\DropUz.Common.Presentation.csproj", "{8A5AC1AC-6560-4DB7-BC1C-19B0210363A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropUz.Tools.DbMigrator", "src\Tools\DropUz.Tools.DbMigrator\DropUz.Tools.DbMigrator.csproj", "{E2F4767E-E026-495C-800A-54ADE26BFC9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{8A5AC1AC-6560-4DB7-BC1C-19B0210363A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A5AC1AC-6560-4DB7-BC1C-19B0210363A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A5AC1AC-6560-4DB7-BC1C-19B0210363A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2F4767E-E026-495C-800A-54ADE26BFC9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F4767E-E026-495C-800A-54ADE26BFC9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F4767E-E026-495C-800A-54ADE26BFC9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F4767E-E026-495C-800A-54ADE26BFC9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{BF7E97C6-9B8C-4611-9791-506EE80E6FAD} = {76266329-3D7D-4CEA-8FE7-B98C1288A8FD}
 		{757E8C9F-7395-4463-B233-322A94036E86} = {76266329-3D7D-4CEA-8FE7-B98C1288A8FD}
 		{8A5AC1AC-6560-4DB7-BC1C-19B0210363A4} = {76266329-3D7D-4CEA-8FE7-B98C1288A8FD}
+		{E2F4767E-E026-495C-800A-54ADE26BFC9A} = {D8FE47AD-0524-4A92-A59B-91751412AE73}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {94A825EB-ECF1-4C02-9DA7-82A2377F3DAD}
