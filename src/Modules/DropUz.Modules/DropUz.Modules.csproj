@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Catalog\DropUz.Modules.Catalog.Infrastructure\DropUz.Modules.Catalog.Infrastructure.csproj" />
+    <ProjectReference Include="..\Sellers\DropUz.Modules.Sellers.Infrastructure\DropUz.Modules.Sellers.Infrastructure.csproj" />
+    <ProjectReference Include="..\Cart\DropUz.Modules.Cart.Infrastructure\DropUz.Modules.Cart.Infrastructure.csproj" />
+    <ProjectReference Include="..\Orders\DropUz.Modules.Orders.Infrastructure\DropUz.Modules.Orders.Infrastructure.csproj" />
+    <ProjectReference Include="..\Payments\DropUz.Modules.Payments.Infrastructure\DropUz.Modules.Payments.Infrastructure.csproj" />
+    <ProjectReference Include="..\Cargo\DropUz.Modules.Cargo.Infrastructure\DropUz.Modules.Cargo.Infrastructure.csproj" />
+    <ProjectReference Include="..\Notifications\DropUz.Modules.Notifications.Infrastructure\DropUz.Modules.Notifications.Infrastructure.csproj" />
+    <ProjectReference Include="..\Admin\DropUz.Modules.Admin.Infrastructure\DropUz.Modules.Admin.Infrastructure.csproj" />
+    <ProjectReference Include="..\Identity\DropUz.Modules.Identity.Infrastructure\DropUz.Modules.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Common\DropUz.Common.Application\DropUz.Common.Application.csproj" />
+    <ProjectReference Include="..\..\Common\DropUz.Common.Infrastructure\DropUz.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Common\DropUz.Common.Presentation\DropUz.Common.Presentation.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

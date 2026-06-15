@@ -1,0 +1,6 @@
+services:
+  dropuz.api:
+    image: ${DOCKER_REGISTRY-}dropuzapi
+    build:
+      context: .
+      dockerfile: src/Api/DropUz.Api/Dockerfile
