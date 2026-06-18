@@ -43,7 +43,9 @@ public static class InfrastructureConfiguration
                 .AddInterceptors(serviceProvider.GetRequiredService<InsertOutboxMessagesInterceptor>());
         });
 
-        services.TryAddScoped<IUnitOfWork, UnitOfWork>();
+        services.TryAddScoped<UnitOfWork<MainDbContext>>();
+        services.TryAddScoped<IUnitOfWork>(serviceProvider =>
+            serviceProvider.GetRequiredService<UnitOfWork<MainDbContext>>());
         services.TryAddScoped<IMainRepository, MainRepository>();
         services.TryAddScoped<IDatabaseSchemaInitializer, DatabaseSchemaInitializer>();
 

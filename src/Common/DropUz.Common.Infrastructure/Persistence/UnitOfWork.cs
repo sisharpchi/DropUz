@@ -1,9 +1,10 @@
 using DropUz.Common.Application.Data;
-using DropUz.Common.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace DropUz.Common.Infrastructure.Persistence;
 
-internal class UnitOfWork(MainDbContext context) : IUnitOfWork
+public class UnitOfWork<TContext>(TContext context) : IUnitOfWork
+    where TContext : DbContext
 {
     public Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {

@@ -18,7 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Common\DropUz.Common.Infrastructure\DropUz.Common.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Common\DropUz.Common.Presentation\DropUz.Common.Presentation.csproj" />
-    <ProjectReference Include="..\..\Modules\DropUz.Modules\DropUz.Modules.csproj" />
+    <ProjectReference Include="..\..\Modules\Identity\DropUz.Modules.Identity.Infrastructure\DropUz.Modules.Identity.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

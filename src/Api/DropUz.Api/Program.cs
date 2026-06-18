@@ -1,4 +1,8 @@
 
+using DropUz.Common.Infrastructure;
+using DropUz.Common.Presentation.Endpoints;
+using DropUz.Modules.Identity.Infrastructure;
+
 namespace DropUz.Api
 {
     public class Program
@@ -9,6 +13,8 @@ namespace DropUz.Api
 
             // Add services to the container.
 
+            builder.Services.AddDropUzCommonInfrastructure(builder.Configuration);
+            builder.Services.AddIdentityModule();
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
@@ -25,8 +31,10 @@ namespace DropUz.Api
 
             app.UseHttpsRedirection();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
+            app.MapEndpoints();
 
             app.MapControllers();
 

@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="8.0.11" />
+	<PackageReference Include="OpenIddict.EntityFrameworkCore.Models" Version="7.5.0" />
   </ItemGroup>
 
   <PropertyGroup>

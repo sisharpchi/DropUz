@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace DropUz.Common.Infrastructure.Persistence;
 
-internal class GenericRepository<TContext> : IRepository
+public abstract class GenericRepository<TContext> : IRepository
     where TContext : DbContext
 {
     protected readonly TContext Context;

@@ -10,6 +10,19 @@
     <PackageReference Include="OpenIddict.EntityFrameworkCore" Version="7.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Database\Migrations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\DropUz.Common.Application\DropUz.Common.Application.csproj" />
+    <ProjectReference Include="..\..\..\Common\DropUz.Common.Infrastructure\DropUz.Common.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\Common\DropUz.Common.Presentation\DropUz.Common.Presentation.csproj" />
+    <ProjectReference Include="..\DropUz.Modules.Identity.Application\DropUz.Modules.Identity.Application.csproj" />
+    <ProjectReference Include="..\DropUz.Modules.Identity.Domain\DropUz.Modules.Identity.Domain.csproj" />
+    <ProjectReference Include="..\DropUz.Modules.Identity.Presentation\DropUz.Modules.Identity.Presentation.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
