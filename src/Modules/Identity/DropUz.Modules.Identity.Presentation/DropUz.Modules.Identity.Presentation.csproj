@@ -5,6 +5,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\DropUz.Common.Application\DropUz.Common.Application.csproj" />
     <ProjectReference Include="..\..\..\Common\DropUz.Common.Presentation\DropUz.Common.Presentation.csproj" />
     <ProjectReference Include="..\DropUz.Modules.Identity.Application\DropUz.Modules.Identity.Application.csproj" />
     <ProjectReference Include="..\DropUz.Modules.Identity.Domain\DropUz.Modules.Identity.Domain.csproj" />

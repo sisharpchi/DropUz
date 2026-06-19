@@ -4,8 +4,7 @@ using DropUz.Common.Application.Pagination;
 namespace DropUz.Modules.Identity.Application.Users.GetUsers;
 
 public sealed record GetUsersQuery(
-    int? PageNumber,
-    int? PageSize,
+    PageRequest Page,
     string? Search,
     string? PhoneNumber,
     string? Role,

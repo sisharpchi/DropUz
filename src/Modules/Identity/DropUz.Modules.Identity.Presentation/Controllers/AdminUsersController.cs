@@ -20,23 +20,16 @@ public sealed class AdminUsersController(ISender sender) : ControllerBase
     [HttpGet]
     [ProducesResponseType(typeof(PagedResponse<UserResponse>), StatusCodes.Status200OK)]
     public async Task<IActionResult> GetAll(
-        [FromQuery] int? pageNumber,
-        [FromQuery] int? pageSize,
-        [FromQuery] string? search,
-        [FromQuery] string? phoneNumber,
-        [FromQuery] string? role,
-        [FromQuery] string? sortBy,
-        [FromQuery] string? sortDirection,
+        [FromQuery] GetUsersRequest request,
         CancellationToken cancellationToken)
     {
         var query = new GetUsersQuery(
-            pageNumber,
-            pageSize,
-            search,
-            phoneNumber,
-            role,
-            sortBy,
-            sortDirection);
+            request.ToPageRequest(),
+            request.Search,
+            request.PhoneNumber,
+            request.Role,
+            request.SortBy,
+            request.SortDirection);
 
         var result = await sender.Send(query, cancellationToken);
 

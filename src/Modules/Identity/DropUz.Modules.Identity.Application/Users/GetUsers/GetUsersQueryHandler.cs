@@ -22,7 +22,7 @@ public sealed class GetUsersQueryHandler(
         GetUsersQuery query,
         CancellationToken cancellationToken)
     {
-        var pageRequest = new PageRequest(query.PageNumber ?? 1, query.PageSize ?? 20);
+        PageRequest pageRequest = query.Page;
         IQueryable<User> users = userManager.Users.AsNoTracking();
 
         string? search = StringNormalizer.Normalize(query.Search)?.ToLowerInvariant();
