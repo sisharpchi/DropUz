@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Common\DropUz.Common.Domain\DropUz.Common.Domain.csproj" />
+    <ProjectReference Include="..\..\Catalog\DropUz.Modules.Catalog.Domain\DropUz.Modules.Catalog.Domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

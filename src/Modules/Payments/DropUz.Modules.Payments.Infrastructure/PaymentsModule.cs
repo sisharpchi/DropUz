@@ -1,0 +1,23 @@
+using DropUz.Common.Infrastructure.Data;
+using DropUz.Common.Presentation.Endpoints;
+using DropUz.Modules.Payments.Infrastructure.Database;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using PaymentsApplication = DropUz.Modules.Payments.Application.AssemblyReference;
+using PaymentsPresentation = DropUz.Modules.Payments.Presentation.AssemblyReference;
+
+namespace DropUz.Modules.Payments.Infrastructure;
+
+public static class PaymentsModule
+{
+    public static IServiceCollection AddPaymentsModule(this IServiceCollection services)
+    {
+        services.AddMediatR(configuration =>
+            configuration.RegisterServicesFromAssembly(PaymentsApplication.Assembly));
+
+        services.TryAddEnumerable(ServiceDescriptor.Scoped<IMainDbContextModelContributor, PaymentsModelContributor>());
+        services.AddEndpoints(PaymentsPresentation.Assembly);
+
+        return services;
+    }
+}

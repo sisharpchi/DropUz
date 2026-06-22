@@ -1,7 +1,11 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Common\DropUz.Common.Application\DropUz.Common.Application.csproj" />
+    <ProjectReference Include="..\..\..\Common\DropUz.Common.Infrastructure\DropUz.Common.Infrastructure.csproj" />
     <ProjectReference Include="..\..\..\Common\DropUz.Common.Presentation\DropUz.Common.Presentation.csproj" />
+    <ProjectReference Include="..\DropUz.Modules.Cargo.Application\DropUz.Modules.Cargo.Application.csproj" />
+    <ProjectReference Include="..\DropUz.Modules.Cargo.Domain\DropUz.Modules.Cargo.Domain.csproj" />
     <ProjectReference Include="..\DropUz.Modules.Cargo.Presentation\DropUz.Modules.Cargo.Presentation.csproj" />
   </ItemGroup>
 

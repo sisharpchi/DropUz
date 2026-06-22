@@ -12,13 +12,25 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.22.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Common\DropUz.Common.Infrastructure\DropUz.Common.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Common\DropUz.Common.Presentation\DropUz.Common.Presentation.csproj" />
+    <ProjectReference Include="..\..\Modules\Admin\DropUz.Modules.Admin.Infrastructure\DropUz.Modules.Admin.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Cargo\DropUz.Modules.Cargo.Infrastructure\DropUz.Modules.Cargo.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Cart\DropUz.Modules.Cart.Infrastructure\DropUz.Modules.Cart.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Catalog\DropUz.Modules.Catalog.Infrastructure\DropUz.Modules.Catalog.Infrastructure.csproj" />
     <ProjectReference Include="..\..\Modules\Identity\DropUz.Modules.Identity.Infrastructure\DropUz.Modules.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Notifications\DropUz.Modules.Notifications.Infrastructure\DropUz.Modules.Notifications.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Orders\DropUz.Modules.Orders.Infrastructure\DropUz.Modules.Orders.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Payments\DropUz.Modules.Payments.Infrastructure\DropUz.Modules.Payments.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Modules\Sellers\DropUz.Modules.Sellers.Infrastructure\DropUz.Modules.Sellers.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
