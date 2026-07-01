@@ -51,7 +51,7 @@ public static class IdentityModule
         services
             .AddIdentityCore<User>(options =>
             {
-                options.User.RequireUniqueEmail = true;
+                options.User.RequireUniqueEmail = false;
                 options.Password.RequiredLength = 8;
                 options.Password.RequireDigit = true;
                 options.Password.RequireLowercase = true;
@@ -93,8 +93,13 @@ public static class IdentityModule
                 options.AddEphemeralSigningKey();
                 options.DisableAccessTokenEncryption();
 
-                options.UseAspNetCore()
+                var aspNetCoreBuilder = options.UseAspNetCore()
                     .EnableTokenEndpointPassthrough();
+
+                if (openIddictOptions.AllowInsecureHttp)
+                {
+                    aspNetCoreBuilder.DisableTransportSecurityRequirement();
+                }
             })
             .AddValidation(options =>
             {

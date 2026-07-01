@@ -18,11 +18,13 @@ using Microsoft.Extensions.Hosting;
 HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
 
 builder.Configuration
+    .SetBasePath(AppContext.BaseDirectory)
     .AddJsonFile("appsettings.json", optional: true)
     .AddJsonFile("appsettings.Development.json", optional: true)
     .AddEnvironmentVariables();
 
 builder.Services.AddDropUzCommonInfrastructure(builder.Configuration);
+builder.Services.AddRouting();
 builder.Services.AddIdentityModule(builder.Configuration);
 builder.Services.AddCatalogModule();
 builder.Services.AddSellersModule();

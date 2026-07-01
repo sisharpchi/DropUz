@@ -7,4 +7,6 @@ internal sealed class IdentityOpenIddictOptions
     public int AccessTokenLifetimeMinutes { get; set; } = 60;
 
     public int RefreshTokenLifetimeDays { get; set; } = 14;
+
+    public bool AllowInsecureHttp { get; set; }
 }
